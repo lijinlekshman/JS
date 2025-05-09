@@ -36,7 +36,9 @@ const bill3 = function () {
   } and the total is ${bills[bills.length - 1] + tips[tips.length - 1]}`;
 };
 
-console.log(bill1(), bill2(), bill3());
+console.log(bill1());
+console.log(bill2());
+console.log(bill3());
 
 console.log(`Th bills are`);
 
