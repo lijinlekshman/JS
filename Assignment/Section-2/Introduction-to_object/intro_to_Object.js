@@ -42,3 +42,9 @@ if (LijinObject[inputter]) {
 } else {
   console.log("Sorry, wrong Request!");
 }
+
+// adding new properties
+
+LijinObject.location = "India";
+LijinObject["Website"] = "https:lijinlekshman.42web.io";
+console.log(LijinObject);
