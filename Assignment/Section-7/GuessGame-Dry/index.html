@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+          body {
+        font-family: "Comic Sans MS", sans-serif; 
+    }
+        .container{
+            width:100%;
+            height:100vh;
+            display:flex;
+            background: #000;
+            color: #FFF;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif fonts like Roboto and Helvetica;
+            position: relative;
+        }
+        .left{
+            width:50%;
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            color: #FFF;
+            padding: 20px;
+        }
+        .left input{
+            width: 50%;
+            height: 30px;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 0 auto;
+            background-color: #FFF;
+            border: 2px solid #000;
+        }
+        .left button{
+            width: 40%;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            color: #000;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 5px;
+            background: #CCC;
+        }
+
+        .right{
+            width:50%;
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:flex-start;
+            flex-flow: column;
+        }
+
+        .right p{
+            font-size: 20px;
+            color: #FFF;
+        }
+
+        .header{
+            width:100%;
+            height: 100px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align: center;
+            border-bottom: 5px solid #FFF;
+            padding: 20px;
+        }
+        .header h1{
+            font-size: 30px;
+            color: #FFF;
+        }
+
+        .content{
+            width:100%;
+            height: calc(100% - 100px);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align: center;
+        }
+        .guessNumber{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #FFF;   
+            color: #000;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            border: 5px solid #000;
+            position: absolute;
+            top: 90px;
+        }
+        .reset{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            color: #000;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 5px;
+            background: #CCC;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="reset" class="reset">Play Again</button>
+            <h1>Guess My Number !</h1>
+            <div class="guessNumber">?</div>
+        </div>
+        <div class="content">
+        <div class="left">
+            <input type="text" id="input">
+            <button id="btn">Check</button>
+        </div>
+        <div class="right">
+            <p class="message">Start Guessing...!</p>
+            <div class="scoreParent">💰 Score : <span class="score">20</span></div>
+            <div class="scoreParent">⛳ Highscore : <span class="highScore">0</span></div>
+        </div>
+        </div>
+    </div>
+
+    <script src="guessGame_dry.js"></script>
+</body>
+</html>
