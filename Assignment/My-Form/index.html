@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Form</title>
+
+    <style>
+        body{
+            height: 98vh;
+                        font-family: sans-serif;
+        }
+        form{
+            height: 100%;
+            margin-top: 200px;
+        }
+        form h1{
+            text-align: center;
+        }
+        .parent{
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background:#eee;
+            padding:20px;
+            border-radius: 6px;
+            border:1px solid #ccc;
+            display: flex;
+            gap: 10px;
+            flex-flow: column;
+            font-size: 14px;
+        }
+        .left-right{
+            display: flex;
+            width: 100%;
+        }
+        .left{
+            width:50%;
+
+        }
+        .right{
+            width:calc(50% - 20px);
+            margin-left: 20px;
+        }
+        .footer{
+            width: 100%;
+            display: block;
+        }
+        .field{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .field > label{
+            width: 100%;
+        }
+        .field > input, .field > textarea{
+             width: 100%;
+             min-height: 26px;
+             border-radius: 6px;
+             border: none;
+             margin-top: 5px;;
+        }
+        .field > input:hover, .field > textarea:hover, .field > input:focus, .field > textarea:focus{
+            background:rgba(255,255,225,0.7);
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+        .field textarea{
+            min-height: 100px;
+            resize: none;
+            width: 100%;
+        }
+        .field p {
+            font-size:10px;
+            color:#FF0000;
+            display: none;
+        }
+
+        .buttons{
+            width: 100%;
+            display: flex;
+        }
+
+        .buttons button{
+            width: 100%;
+            padding:10px;
+            background: #FFF;
+            border: none;
+            border-radius: 6px;
+        }
+        .buttons button:hover, .buttons button:focus, .buttons button:active{
+            background: rgba(255,255,225,0.7);
+            font-weight: 600;
+            cursor: pointer;
+        } 
+
+        .buttons .left button{
+            background: rgba(0, 0, 255, 0.5);
+            color: #FFF;
+        }
+        .buttons .left button:hover, .buttons .left button:focus, .buttons .left button:active{
+            background: rgba(0, 0, 255, 0.7);
+            font-weight: 300;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <h1>My Form 📄</h1>
+        <div class="parent">
+            <div class="left-right">
+                 <div class="left">
+                <div class="field">
+                    <label for="fName">FirstName</label>
+                    <input id="fName" type="text" />
+                    <p id="error">Field cannot be Empty! </p>
+                </div>
+                 <div class="field">
+                    <label for="mNumber">Moble Number</label>
+                    <input type="number" id="mNumber"/>
+                    <p id="error">Field cannot be Empty! </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="field">
+                    <label for="lName">LastName</label>
+                    <input type="text" id="lName" />
+                    <p id="error">Field cannot be Empty! </p>
+                </div>
+                 <div class="field">
+                    <label for="eMail">EMail ID</label>
+                    <input type="email" id="eMail"/>
+                    <p id="error">Field cannot be Empty! </p>
+                </div>
+            </div>
+            </div>
+           
+            <div class="footer">
+                <div class="field">
+                     <label for="msg">Message</label>
+                    <textarea id="msg"></textarea>
+                    <p id="errorTxt">Field cannot be Empty! </p>
+                </div>
+                <div class="buttons">
+                    <div class="left">
+                        <button type="submit" id="submit">Send</button>
+                    </div>
+                    <div class="right">
+                        <button type="reset" id="reset">Clear</button>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="reg"></div>
+    </form>
+
+    <script src="my-form.js"></script>
+</body>
+</html>
